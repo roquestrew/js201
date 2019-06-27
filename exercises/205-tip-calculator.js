@@ -11,6 +11,9 @@
 // tipAmount(40, 'fair') --> 6
 
 
+function tipAmount(bill,service) {
+  if 
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "totalAmount" that takes the same arguments as "tipAmount"
@@ -21,8 +24,9 @@
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
+function totalAmount(bill, service) {
 
-
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
 // and the number of people to split the bill between. It should return the final
@@ -31,3 +35,7 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+function splitAmount(bill,service,people) {
+
+}
