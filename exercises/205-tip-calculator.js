@@ -11,8 +11,23 @@
 // tipAmount(40, 'fair') --> 6
 
 
-function tipAmount(bill,service) {
-  if 
+function tipAmount(bill, service) {
+  var tip;
+   if (service === "good") { tip = .2 }
+   if (service === "fair") { tip = .15 }
+   if (service === "poor") { tip = .1 }
+  return bill * tip;
+}
+
+// other way:
+
+function tipWithObject(amount, level) {
+  var leveltype = {
+    good: 0.2,
+    fair: 0.15,
+    poor: 0.1,
+  }
+    return amount * (levelType[level]);
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -25,8 +40,9 @@ function tipAmount(bill,service) {
 // totalAmount(40, 'fair') --> 46
 
 function totalAmount(bill, service) {
-
+  return bill + tipAmount(bill, service);
 }
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "splitAmount" that takes a bill amount, the level of service,
 // and the number of people to split the bill between. It should return the final
@@ -36,6 +52,6 @@ function totalAmount(bill, service) {
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
 
-function splitAmount(bill,service,people) {
-
+function splitAmount(bill, service, people) {
+  return totalAmount(bill, service) / people;
 }

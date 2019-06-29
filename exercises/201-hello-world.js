@@ -13,7 +13,9 @@ function hello(name) {
 
 function helloDefault(name) {
     if (name) {
-         return "Hello, " + name + "!";
+        // hello(name);
+        return "Hello, " + name + "!";
     }
+    // else hello("world")
     else return "Hello, world!";
 }

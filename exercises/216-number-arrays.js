@@ -1,7 +1,9 @@
 // Write a function "max" that takes an array of numbers returns the highest
 // number in the array.
 
+function max(numbers) {
 
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "sumNumbers" which is given an array of numbers and returns
@@ -9,7 +11,9 @@
 // Example:
 // sumNumbers([1, 4, 8]) --> 13
 
+function sumNumbers(numbers) {
 
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "positives" which is given an array of numbers and
@@ -19,14 +23,17 @@
 // positives([1, 2, 3]) --> [1, 2, 3]
 // positives([-1, -2, -3]) --> []
 
+function positives(numbers) {
 
-
-
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "evens" which takes an array of numbers and returns a new
 // array containing only the even numbers in the given array.
 // Hint: you may want to re-use your "isEven" function from 01-predicate-functions.js
 
+function evens(numbers) {
+
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -34,7 +41,9 @@
 // array containing only the odd numbers in the given array.
 // Hint: you may want to re-use your "isOdd" function from 01-predicate-functions.js
 
+function odds(numbers) {
 
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "integers" which takes an array of numbers and returns a new
@@ -44,7 +53,9 @@
 // Example:
 // integers([3.14, 2.4, 7, 8.1, 2]) --> [7, 2]
 
+function integers(numbers) {
 
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "squareDance" which takes an array of numbers and returns a
@@ -52,3 +63,7 @@
 //
 // Example:
 // squareDance([1, 2, 3]) --> [1, 4, 9]
+
+function squareDance(numbers) {
+    
+}
