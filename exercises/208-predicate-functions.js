@@ -117,10 +117,6 @@ function isOdd (checkOdd) {
 
 // CHRIS's EXAMPLE
 
-// function isOdd(n) {
-//     return typeof n === 'number' && n % 2 !== 0;
-// }
-
 // function isInteger(n) { return typeof n === 'number' && n % 1 === 0 }
 // function isEven (n) { return isInteger(n) && n % 2 === 0 }
 // function isOdd (n) { return isInteger(n) && n % 2 !== 0 }
@@ -200,6 +196,7 @@ function isCapitalCity (state, city) {
         Missouri: 'Jefferson City',    
         Wyoming: 'Cheyenne'
     };
+    return (capitals[state] == city);
 
 }
 
