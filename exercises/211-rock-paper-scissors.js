@@ -7,6 +7,22 @@
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
 
-function rockPaperScissors (throwP1, throwP2) {
-    
+
+function rockPaperScissors (p1, p2) {
+
+    let throws = ['paper', 'rock', 'scissors'];
+
+    const winner = [
+        ['draw', 'player 1', 'player 2'],
+        ['player 2', 'draw', 'player 1'],
+        ['player 1', 'player 2', 'draw'],
+    ];
+
+     return winner[throws.indexOf(p1)][throws.indexOf(p2)]
+
 }
+
+//           P2: PAPER ROCK  SCISSORS
+// P1: PAPER     DRAW  P1    P2
+// P1: ROCK      P2    DRAW  P1
+// P1: SCISSORS  P1    P2    DRAW
