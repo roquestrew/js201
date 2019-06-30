@@ -20,7 +20,7 @@ function fizzbuzz(number) {
         if ((i % 3 == 0) && (i % 5 !== 0)) { fizzbuzzString += "fizz"}
         if ((i % 3 !== 0) && (i % 5 == 0)) { fizzbuzzString += "buzz"}
         if ((i % 3 == 0) && (i % 5 == 0)) { fizzbuzzString += "fizzbuzz"}
-        console.log(fizzbuzzString);
+       // console.log(fizzbuzzString);
     }
     return fizzbuzzString;
 }

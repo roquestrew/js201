@@ -6,7 +6,12 @@
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
 function numberJoinerWhile (start, end) {
-
+    var joinedString = ""
+    while (start < end) {
+       joinedString += (start++ + "_");
+    //   console.log(joinedString);
+    }
+    return joinedString + start;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -14,7 +19,11 @@ function numberJoinerWhile (start, end) {
 // except using a "for" loop internally.
 
 function numberJoinerFor(start, end) {
-
+    var joinedString = ""
+    for (start; start < end; start++) {
+       joinedString += (start + "_");
+    }
+    return joinedString + start;
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFancy" which does the same thing as "numberJoinerWhile",
@@ -27,5 +36,10 @@ function numberJoinerFor(start, end) {
 
 
 function numberJoinerFancy (start, end, separator) {
-    
+    var joinedString = ""
+    for (start; start < end; start++) {
+       if (separator) joinedString += (start + separator);
+       else joinedString += (start + "_");
+    }
+    return joinedString + start;
 }
