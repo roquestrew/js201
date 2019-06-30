@@ -8,8 +8,8 @@
 // Example:
 // reverse("skoob") --> "books"
 
-function reverse() {
-
+function reverse(string) {
+    return string.split('').reverse().join('')
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -20,8 +20,8 @@ function reverse() {
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
 
-function findLongestWord(string) {
-
+function findLongestWord(sentence) {
+    return (sentence.split(' ').sort( function(a,b) { return b.length - a.length }))[0]
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -33,9 +33,12 @@ function findLongestWord(string) {
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
 
-function nicer(dirty) {
-
+function nicer(dirtySentence) {
+    let forbiddenWords = ['heck', 'darn', 'dang', 'crappy']
+    return dirtySentence.replace(new RegExp(forbiddenWords.join('|'), 'g'), '').replace(/\s\s+/g,' ');
 }
+
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "capitalizeAll"
@@ -62,5 +65,5 @@ function capitalizeAll (sentence) {
 // split('xyz', 'r') --> ['xyz']
 
 function split(string, delimiter) {
-    
+
 }
