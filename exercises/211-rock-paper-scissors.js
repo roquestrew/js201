@@ -26,3 +26,4 @@ function rockPaperScissors (p1, p2) {
 // P1: PAPER     DRAW  P1    P2
 // P1: ROCK      P2    DRAW  P1
 // P1: SCISSORS  P1    P2    DRAW
+

@@ -8,6 +8,8 @@
 // Example:
 // reverse("skoob") --> "books"
 
+// chaining methods: split into array, reverse array, and join array back into string
+
 function reverse(string) {
     return string.split('').reverse().join('')
 }
@@ -19,6 +21,8 @@ function reverse(string) {
 //
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
+
+// chaining again: splitting into array, using sort method to sort array items by length, returning first array item
 
 function findLongestWord(sentence) {
     return (sentence.split(' ').sort( function(a,b) { return b.length - a.length }))[0]
@@ -33,9 +37,16 @@ function findLongestWord(sentence) {
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
 
+// create array of words
+// replace words using regex that joins array with pipes
+// replace extra spaces
+
 function nicer(dirtySentence) {
     let forbiddenWords = ['heck', 'darn', 'dang', 'crappy']
-    return dirtySentence.replace(new RegExp(forbiddenWords.join('|'), 'g'), '').replace(/\s\s+/g,' ');
+    let forbiddenRegex = new RegExp(forbiddenWords.join('|'), 'g')
+    let sentenceWithSpace = dirtySentence.replace(forbiddenRegex, '');
+    let cleanSentence =  sentenceWithSpace.replace(/\s\s+/g,' ');
+    return cleanSentence;
 }
 
 
@@ -49,7 +60,24 @@ function nicer(dirtySentence) {
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
 
+// console.log("sentenceArray[" + i + "]: " + capitalizedArray[i])
+// console.log("word: " + word)
+// console.log("sentenceArray[" + i + "]: " + capitalizedArray[i])
+// console.log("word.charAt(0).toUpperCase(): " + word.charAt(0).toUpperCase())
+// console.log("word.slice(1): " + word.slice(1))
+// console.log("~~~~~~~~~~~~~~~~~~~")
+        
+
 function capitalizeAll (sentence) {
+
+    var sentenceArray = sentence.split(' ')
+	var capitalizedArray = []
+
+    sentenceArray.forEach( (word, i) => {
+		capitalizedArray[i] = word.charAt(0).toUpperCase() + word.substring(1)
+    }) 
+
+    return capitalizedArray.join(' ')
 
 }
 
@@ -64,6 +92,49 @@ function capitalizeAll (sentence) {
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
 
-function split(string, delimiter) {
+// Example 1 by Amanda
+// see MDN String for methods
+// approaches: FOR loop, WHILE loop, REGEX
 
+// function split(string, delimiter){
+//     var results = []
+//     var delimiterLength = delimiter.length
+//     for(var index=0; index < string.length; index++) {
+//         let characters == string.substr(index, delimiterLength)
+//         // let chunkStart = 
+//         // let chunkEnd
+//         // console.log(characters, index)
+//         if (character === delimiter) {
+//             console.log(string.substr(0, index))
+//         }
+//     }
+// }
+
+function split(string,delimiter){
+
+    var splitArray = []
+
+    // Loop while a delimiter can be found
+	while((delimiterNext = string.indexOf(delimiter)) > 0 ){
+	//	console.log("Adding next item",string.slice(0,delimiterNext))
+		splitArray.push(string.slice(0,delimiterNext))
+        string = string.slice(delimiterNext + delimiter.length)
+
+    }
+
+    // No delimiter found, so add remaining string to splitArray
+	// console.log("Adding final item", string)
+	splitArray.push(string)
+
+    return splitArray
 }
+
+console.log(split('a-b-c', '-')) // --> ['a', 'b', 'c']
+console.log(split('APPLExxBANANAxxCHERRYxxBLUE', 'xx')) // --> ['APPLE', 'BANANA', 'CHERRY']
+console.log(split('xyz', 'r')) // --> ['xyz']
+
+
+
+
+
+
